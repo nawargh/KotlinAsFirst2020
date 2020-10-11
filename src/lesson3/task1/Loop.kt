@@ -72,7 +72,13 @@ fun digitCountInNumber(n: Int, m: Int): Int =
  *
  * Использовать операции со строками в этой задаче запрещается.
  */
-fun digitNumber(n: Int): Int = TODO()
+fun digitNumber(n: Int): Int {
+    while n>0 {
+        n = n / 10
+        digitNumber = digitNumber+1
+    }
+
+}
 
 /**
  * Простая (2 балла)
@@ -80,21 +86,35 @@ fun digitNumber(n: Int): Int = TODO()
  * Найти число Фибоначчи из ряда 1, 1, 2, 3, 5, 8, 13, 21, ... с номером n.
  * Ряд Фибоначчи определён следующим образом: fib(1) = 1, fib(2) = 1, fib(n+2) = fib(n) + fib(n+1)
  */
-fun fib(n: Int): Int = TODO()
+fun fib(n: Int): Int{
+var a = 0;
+var fib = 1;
+    for (i in 2..n){
+    n= a + fib
+    a = fib
+    fib = n
+}
 
 /**
  * Простая (2 балла)
  *
  * Для заданного числа n > 1 найти минимальный делитель, превышающий 1
  */
-fun minDivisor(n: Int): Int = TODO()
+fun minDivisor(n: Int): Int
+{var a = 2
+    while n % a <> 0{
+    a=a+1
+}
+    return a }
 
 /**
  * Простая (2 балла)
  *
  * Для заданного числа n > 1 найти максимальный делитель, меньший n
  */
-fun maxDivisor(n: Int): Int = TODO()
+fun maxDivisor(n: Int): Int {
+
+}
 
 /**
  * Простая (2 балла)
@@ -112,7 +132,23 @@ fun maxDivisor(n: Int): Int = TODO()
  * Написать функцию, которая находит, сколько шагов требуется для
  * этого для какого-либо начального X > 0.
  */
-fun collatzSteps(x: Int): Int = TODO()
+fun collatzSteps(x: Int): Int {
+    var cnt=1
+    if(x==1)return cnt
+
+    while(x!=1){
+        if(x==10)return cnt+6
+        if(x%2==0){
+            cnt=cnt+1
+        }
+        else{
+            cnt=cnt+1
+            n=n+n+n+1
+        }
+    }
+    return cnt;
+}
+}
 
 /**
  * Средняя (3 балла)
@@ -120,8 +156,17 @@ fun collatzSteps(x: Int): Int = TODO()
  * Для заданных чисел m и n найти наименьшее общее кратное, то есть,
  * минимальное число k, которое делится и на m и на n без остатка
  */
-fun lcm(m: Int, n: Int): Int = TODO()
-
+fun lcm(m: Int, n: Int): Int {
+    while ((m * n) != 0 ) {
+        if(m > n) {
+            m=m%n
+            else
+               n=n%m
+        }
+        gcd = m + n
+    }
+    lcm = a * b / gcd
+}
 /**
  * Средняя (3 балла)
  *
@@ -129,7 +174,9 @@ fun lcm(m: Int, n: Int): Int = TODO()
  * Взаимно простые числа не имеют общих делителей, кроме 1.
  * Например, 25 и 49 взаимно простые, а 6 и 8 -- нет.
  */
-fun isCoPrime(m: Int, n: Int): Boolean = TODO()
+fun isCoPrime(m: Int, n: Int): Boolean {
+    = TODO()
+}
 
 /**
  * Средняя (3 балла)

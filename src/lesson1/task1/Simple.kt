@@ -108,6 +108,8 @@ sqrt(sqr(x2-x1)+sqr(y2-y1))
  */
 
 fun thirdDigit(number: Int): Int {
+
+
     val third = (number % 1000 )/100
     return third
 }

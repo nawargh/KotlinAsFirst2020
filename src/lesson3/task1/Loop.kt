@@ -113,6 +113,15 @@ fun minDivisor(n: Int): Int
  * Для заданного числа n > 1 найти максимальный делитель, меньший n
  */
 fun maxDivisor(n: Int): Int {
+    val div
+    val maxDiv
+    for ( div <= n/2; div += 1 ) {
+        if ( n % div = 0 ) {
+            maxDiv = input / div
+         else
+            maxDiv = 0
+        }
+    return maxDiv
 
 }
 
@@ -175,7 +184,13 @@ fun lcm(m: Int, n: Int): Int {
  * Например, 25 и 49 взаимно простые, а 6 и 8 -- нет.
  */
 fun isCoPrime(m: Int, n: Int): Boolean {
-    = TODO()
+    val k
+    if (k>m) { k=m
+        else k=n }
+    for (i in k){
+        if ((a mod i = 0) and (b mod i = 0)) return true
+        else return false
+    }
 }
 
 /**
@@ -185,7 +200,10 @@ fun isCoPrime(m: Int, n: Int): Boolean {
  * то есть, существует ли такое целое k, что m <= k*k <= n.
  * Например, для интервала 21..28 21 <= 5*5 <= 28, а для интервала 51..61 квадрата не существует.
  */
-fun squareBetweenExists(m: Int, n: Int): Boolean = TODO()
+fun squareBetweenExists(m: Int, n: Int): Boolean{
+
+
+
 
 /**
  * Средняя (3 балла)
@@ -194,7 +212,14 @@ fun squareBetweenExists(m: Int, n: Int): Boolean = TODO()
  *
  * Использовать операции со строками в этой задаче запрещается.
  */
-fun revert(n: Int): Int = TODO()
+fun revert(n: Int): Int {
+    val s = 0
+    while n> 0 do{
+    val m = n mod 10
+    s = s * 10 + m
+    n = n div 10
+}
+    return s }
 
 /**
  * Средняя (3 балла)
@@ -205,7 +230,17 @@ fun revert(n: Int): Int = TODO()
  *
  * Использовать операции со строками в этой задаче запрещается.
  */
-fun isPalindrome(n: Int): Boolean = TODO()
+fun isPalindrome(n: Int): Boolean {
+    val s = 0
+    while n> 0 do{
+    val m = n mod 10
+    s = s * 10 + m
+    n = n div 10}
+ if n=m return true
+    else return false
+}
+
+
 
 /**
  * Средняя (3 балла)
@@ -215,7 +250,21 @@ fun isPalindrome(n: Int): Boolean = TODO()
  *
  * Использовать операции со строками в этой задаче запрещается.
  */
-fun hasDifferentDigits(n: Int): Boolean = TODO()
+fun hasDifferentDigits(n: Int): Boolean {
+    val a
+    val k
+
+    a = n % 10
+    k = a
+    n = n % 10
+    while ( ( n != 0 ) && ( k = a) )
+    {
+        k = n % 10
+        a = n / 10
+    }
+    if ( k != n ) return true
+    else return false
+}
 
 /**
  * Средняя (4 балла)
